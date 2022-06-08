@@ -1,0 +1,35 @@
+<p>Listado de Héroes</p>
+<!-- Este bloque se va a mostar si heroeBorrado es diferente a un string vacio.
+  noBorrado es una referencia local, esto se usa en el template-->
+<div *ngIf="heroeBorrado !== '';  else noBorrado">
+    <h3>Héroe Borrado:  <small>{{heroeBorrado}}</small> </h3>
+</div>
+<!-- ng-template es un componente propio de angular -->
+<ng-template #noBorrado>
+    <h3>No ha Borrado nada </h3>
+</ng-template>
+
+<button (click)="borrarHeroe()">
+    Borrar
+</button>
+
+<button (click)="prueba()">
+    prueba
+</button>
+
+
+<!-- No es bueno hacerlo así porque si tengo mas elementos es una lista extensa y no la puedo mantener
+<ul>
+    <li>{{heroes [0]}}</li>
+    <li>{{heroes [1]}} </li>
+    <li>{{heroes [2]}} </li>
+    <li>{{heroes [3]}} te extrañaré por siempre</li>
+</ul> -->
+
+<ul>
+    <li *ngFor="let animals of heroes; let i = index">
+       {{i + 1}} - {{animals}}
+    </li>
+</ul>
+
+
