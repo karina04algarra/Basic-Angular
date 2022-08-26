@@ -39,3 +39,17 @@
   .p-1 {
     padding: 1px;
   }
+/* display:flex coloca todo en fila(por defecto todo esta en columna, uo debajo del otro)  */
+  .row {
+    display:flex
+  }
+  /* flex-grow da un espacio, separa los div, que se expanda lo que más pueda */
+  .col {
+    flex-grow: 1;
+    margin-right: 10px;
+  }
+
+  input {
+    display:block;
+    margin: 5px;
+  }

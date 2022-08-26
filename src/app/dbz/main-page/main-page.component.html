@@ -1,0 +1,23 @@
+
+<h1>Dragon ball z</h1>
+
+<hr>
+
+<div class="row">
+    <div class="col">
+        <!-- "personajes" se encuentra en el main.ts. [personajes] quiero asociar el valor de esa propiedad, esta en personajes.ts -->
+        <!-- llaves cuadradas [] son para establecer alguna propiedad a este objeto, se le 
+        indica que en el componente hay alguna propiedad, variable o valor que quiero enlazar ahí-->
+        <!-- parentesis () emitir eventos -->
+        <!-- [(ngModel)]="nuevo.nombre" con parentesis y llaves puedo emitir y escuchar eventos  -->
+        <app-personajes>  
+        </app-personajes>
+    </div>
+
+    <div class="col"> 
+        <!-- el nombre que esta en [] puede ser cualquiera, personajes esta main-page.component.ts  -->
+        <app-agregar
+            [nuev]="nuevo_ts"></app-agregar>       
+    </div>
+
+</div>
